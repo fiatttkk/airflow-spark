@@ -25,7 +25,7 @@ with DAG(
     
     t1 = SparkSubmitOperator(
         task_id="pyspark_dag",
-        application="/opt/airflow/scripts/spark_test.py",
+        application="/opt/airflow/scripts/spark-test.py",
         conn_id="spark_default",
         conf={
             'spark.executor.memory': '2g',

@@ -1,1 +1,8 @@
 .vscode/*
+data/
+*.cs
+__pycache__/
+*.log
+*.DS_Store
+latest
+*.env

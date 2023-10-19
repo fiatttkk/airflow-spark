@@ -1,0 +1,12 @@
+FROM jupyter/minimal-notebook
+USER root
+
+# Update and install required tools and OpenJDK-11
+RUN apt-get update && \
+    apt-get install -y openjdk-11-jdk wget iputils-ping curl && \
+    apt clean && \
+    rm -rf /var/lib/apt/lists/*
+
+# Install dependencies
+COPY ./requirements.txt /
+RUN pip install -r /requirements.txt
